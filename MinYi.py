@@ -8,6 +8,6 @@ for a in range(1,27300,500):
     wb_date = requests.get(url)
     soup = BeautifulSoup(wb_date.text,'html.parser').get_text()
     # print(soup)
-    out = json.loads(soup)['resault_array']
+    out = json.loads(soup)['resault_array'] #LOL the programmer at MinYi cannot spell "result"
     for i in out:
         print(i['id'],i['title'],'\n',i['reply'],'\n')
